@@ -67,8 +67,8 @@ public class User {
         return hireDate;
     }
 
-    public void setHireDate(Date dateEmbauche) {
-        this.hireDate = dateEmbauche;
+    public void setHireDate(Date hireDate2) {
+        this.hireDate = hireDate2;
     }
 
     public String getPassword() {
