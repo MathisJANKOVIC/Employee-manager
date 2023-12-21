@@ -8,7 +8,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-
 import java.util.Date;
 
 @Entity
@@ -75,8 +74,8 @@ public class User {
         return password;
     }
 
-    public void setPassword(String motDePasse) {
-        this.password = motDePasse;
+    public void setPassword(String string) {
+        this.password = string;
     }
 
     public Privilege getPrivilege() {
