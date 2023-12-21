@@ -76,7 +76,7 @@ public class MainController {
     }
 
     @PostMapping(path = "/delete")
-    public @ResponseBody String deleteUser(@RequestParam Integer id) {
+    public @ResponseBody String deleteUser(@RequestParam (name = "id") Integer id) {
         User userToDelete = userRepository.findById(id).orElse(null);
         if (userToDelete != null) {
             userRepository.delete(userToDelete);
@@ -90,5 +90,18 @@ public class MainController {
     public @ResponseBody Iterable<User> getAllUsers() {
         // This returns a JSON or XML with the users
         return userRepository.findAll();
+    }
+
+    @GetMapping(path="/connect")
+    public @ResponseBody String connect(@RequestParam(name = "email") String email, @RequestParam(name = "password") String password) {
+        User userToConnect = userRepository.findByMail(email);
+
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+
+        if (userToConnect != null && passwordEncoder.matches(userToConnect.getPassword(), password)) {
+            return "home.html";
+        } else {
+            return "login.html";
+        }
     }
 }
