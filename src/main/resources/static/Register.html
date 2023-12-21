@@ -22,10 +22,13 @@
                     <br><br>
                     <input type="password" placeholder="mot de passe" name="mdp" required>
                     <br><br>
-                    <input type="text" placeholder="privilège" name="Privilege" required>
-                    <br><br>
                     <input type="text" placeholder="date d'embauche" name="date" required>
                     <br><br>
+                    <p>Privilèges:</p>
+                      <input type="radio" id="user" name="typeUser" value="USER">
+                      <label for="user">employé</label>
+                      <input type="radio" id="admin" name="typeUser" value="ADMIN">
+                      <label for="admin">administrateur</label>
                     <div class="text-center"><button type="submit" class="btn btn-primary text-center" name="envoyer">valider</button></div>
                 </form>
             </div>
