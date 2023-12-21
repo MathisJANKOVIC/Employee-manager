@@ -8,7 +8,7 @@
 
 </head>
 <body>
-    <div class="text-center"> <h1>inscription</h1></div>
+    <div class="text-center"> <h1>ajouter un employé</h1></div>
 
     <div class="text-center">
         <div class="container">

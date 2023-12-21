@@ -6,20 +6,20 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class PageController {
 
-    @GetMapping("/home")
+    @GetMapping("/")
     public String home() {
 
-        return "home.html";
+        return "home.jsp";
     }
 
     @GetMapping("/login")
     public String login() {
-        return "login.html";
+        return "login.jsp";
     }
 
     @GetMapping("/register")
     public String register() {
-        return "register.html";
+        return "Register.jsp";
     }
 
     @GetMapping("/admin")
