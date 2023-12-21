@@ -1,14 +1,13 @@
 package com.example.employeemanager.models;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 
 import java.util.Date;
 
@@ -18,15 +17,12 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     private String lastName;
     private String firstName;
     private String mail;
-
-    @Temporal(TemporalType.DATE)
     private Date hireDate;
-
     private String password;
 
     // Enum pour le privilège (peut être ajusté en fonction de vos besoins)
@@ -35,11 +31,11 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Privilege privilege;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
