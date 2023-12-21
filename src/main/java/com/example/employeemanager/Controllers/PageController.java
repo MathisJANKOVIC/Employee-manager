@@ -9,6 +9,7 @@ public class PageController {
 
     @PostMapping("/home")
     public String home() {
+
         return "home.html";
     }
 
