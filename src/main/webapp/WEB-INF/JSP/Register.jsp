@@ -13,22 +13,24 @@
     <div class="text-center">
         <div class="container">
             <div class="card-header">
-                <form action="" method="post">
-                    <input type="text" placeholder="nom" name="LastName" required>
+                <form action="/demo/add" method="post">
+                    <input type="text" placeholder="nom" name="lastName" required>
                     <br><br>
-                    <input type="text" placeholder="prénom" name="FirstName" required>
+                    <input type="text" placeholder="prénom" name="firstName" required>
                     <br><br>
-                    <input type="text" placeholder="email" name="email" required>
+                    <input type="text" placeholder="email" name="mail" required>
                     <br><br>
-                    <input type="password" placeholder="mot de passe" name="mdp" required>
+                    <input type="password" placeholder="mot de passe" name="password" required>
                     <br><br>
-                    <input type="text" placeholder="date d'embauche" name="date" required>
+                    <input type="text" placeholder="privilège" name="privilege" required>
+                    <br><br>
+                    <input type="date" placeholder="date d'embauche" name="hireDate" required>
                     <br><br>
                     <p>Privilèges:</p>
-                      <input type="radio" id="user" name="typeUser" value="USER">
-                      <label for="user">employé</label>
-                      <input type="radio" id="admin" name="typeUser" value="ADMIN">
-                      <label for="admin">administrateur</label>
+                    <input type="radio" id="user" name="typeUser" value="USER">
+                    <label for="user">employé</label>
+                    <input type="radio" id="admin" name="typeUser" value="ADMIN">
+                    <label for="admin">administrateur</label>
                     <div class="text-center"><button type="submit" class="btn btn-primary text-center" name="envoyer">valider</button></div>
                 </form>
             </div>

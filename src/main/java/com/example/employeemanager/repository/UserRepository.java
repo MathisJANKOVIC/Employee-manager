@@ -7,5 +7,5 @@ import com.example.employeemanager.models.User;
 // CRUD refers Create, Read, Update, Delete
 
 public interface UserRepository extends CrudRepository<User, Integer> {
-
+    User findByMail(String mail);
 }

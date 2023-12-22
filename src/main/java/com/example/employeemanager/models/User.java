@@ -8,7 +8,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-
 import java.util.Date;
 
 @Entity
@@ -33,10 +32,6 @@ public class User {
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getLastName() {
@@ -67,16 +62,16 @@ public class User {
         return hireDate;
     }
 
-    public void setHireDate(Date dateEmbauche) {
-        this.hireDate = dateEmbauche;
+    public void setHireDate(Date hireDate2) {
+        this.hireDate = hireDate2;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String motDePasse) {
-        this.password = motDePasse;
+    public void setPassword(String string) {
+        this.password = string;
     }
 
     public Privilege getPrivilege() {
